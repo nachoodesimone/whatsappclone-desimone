@@ -1,0 +1,39 @@
+/* 
+  Estilos para la barra inferior de entrada de texto.
+*/
+
+.ms-control-bar {
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+    background-color: var(--messenger-header-bg);
+    padding: 5px 16px;
+    gap: 15px;
+    z-index: 2;
+}
+
+.ms-text-field {
+    flex: 1;
+    background-color: var(--messenger-sidebar-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 15px;
+    outline: none;
+    color: var(--messenger-text-primary);
+}
+
+.ms-action-button {
+    color: var(--messenger-icon);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.ms-action-button:hover {
+    color: var(--messenger-text-secondary);
+}
+
+.ms-submit-button {
+    color: var(--messenger-blue);
+}

@@ -1,0 +1,99 @@
+/* 
+  Estilos Globales e Indexación de Variables (CSS Variables)
+  
+  Aquí definimos los colores y configuraciones que se usarán en toda la aplicación.
+  Esto facilita cambiar el tema (ej. de claro a oscuro) en un solo lugar.
+*/
+
+:root {
+  /* Colores del tema claro (predeterminado) */
+  --messenger-bg: #d1d7db;
+  --messenger-sidebar-bg: #ffffff;
+  --messenger-chat-bg: #efeae2;
+  --messenger-header-bg: #f0f2f5;
+  --messenger-search-bg: #f0f2f5;
+  --messenger-border: #e9edef;
+  --messenger-text-primary: #111b21;
+  --messenger-text-secondary: #667781;
+  --messenger-message-sent: #d9fdd3;
+  --messenger-message-received: #ffffff;
+  --messenger-icon: #54656f;
+  --messenger-blue: #00a884;
+}
+
+/* 
+  Tema Oscuro (Activado si el <body> tiene la clase .dark)
+*/
+body.dark {
+  --messenger-bg: #0a1014;
+  --messenger-sidebar-bg: #111b21;
+  --messenger-chat-bg: #0b141a;
+  --messenger-header-bg: #202c33;
+  --messenger-search-bg: #202c33;
+  --messenger-border: #222d34;
+  --messenger-text-primary: #e9edef;
+  --messenger-text-secondary: #8696a0;
+  --messenger-message-sent: #005c4b;
+  --messenger-message-received: #202c33;
+  --messenger-icon: #aebac1;
+  --messenger-blue: #00a884;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--messenger-chat-bg);
+  color: var(--messenger-text-primary);
+}
+
+
+/* Contenedor Principal de la App */
+.ms-main-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--messenger-sidebar-bg);
+  overflow: hidden;
+}
+
+/* Responsividad para pantallas pequeñas (Móvil/Tablet) */
+@media (max-width: 768px) {
+
+  /* Ocultar el panel lateral si el chat está abierto */
+  .ms-main-layout.ms-chat-open .ms-panel-left {
+    display: none;
+  }
+
+  /* Ocultar el chat si el panel lateral está activo */
+  .ms-main-layout:not(.ms-chat-open) .ms-chat-area {
+    display: none;
+  }
+
+  /* Forzar que el panel lateral o el chat ocupen todo el ancho */
+  .ms-panel-left,
+  .ms-chat-area {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Para pantallas de escritorio grandes (hasta 2000px) */
+@media (min-width: 769px) {
+  .ms-main-layout {
+    /* En escritorio siempre se ven ambos */
+    flex-direction: row;
+  }
+}

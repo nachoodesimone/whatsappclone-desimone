@@ -1,0 +1,138 @@
+/* 
+  Estilos específicos para el componente ms-panel-left.
+*/
+
+.ms-panel-left {
+    width: 30%;
+    min-width: 300px;
+    max-width: 415px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--messenger-border);
+    background-color: var(--messenger-sidebar-bg);
+}
+
+.ms-panel-top {
+    height: 59px;
+    background-color: var(--messenger-header-bg);
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    justify-content: space-between;
+}
+
+.ms-top-actions {
+    display: flex;
+    gap: 15px;
+    color: var(--messenger-icon);
+    font-size: 20px;
+}
+
+.ms-circle-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dfe5e7;
+    overflow: hidden;
+}
+
+.ms-filter-row {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--messenger-border);
+    display: flex;
+    align-items: center;
+}
+
+.ms-search-container {
+    width: 100%;
+    background-color: var(--messenger-search-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 35px;
+}
+
+.ms-search-container i {
+    color: var(--messenger-icon);
+    font-size: 14px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.ms-filter-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    color: var(--messenger-text-primary);
+    padding: 0;
+    line-height: 1;
+}
+
+.ms-filter-input::placeholder {
+    color: var(--messenger-text-secondary);
+}
+
+
+/* Interruptor de tema animado (Toggle Switch) */
+.ms-theme-toggle-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.ms-theme-toggle-bar {
+    width: 46px;
+    height: 24px;
+    background-color: #ced0d1;
+    border-radius: 24px;
+    position: relative;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ms-theme-toggle-circle {
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ms-theme-toggle-circle i {
+    font-size: 11px;
+    color: #54656f;
+}
+
+/* Estado del toggle en modo oscuro */
+.ms-theme-toggle-container.ms-dark-mode .ms-theme-toggle-bar {
+    background-color: #00a884;
+}
+
+.ms-theme-toggle-container.ms-dark-mode .ms-theme-toggle-circle {
+    transform: translateX(20px);
+}
+
+.ms-theme-toggle-container.ms-dark-mode .ms-theme-toggle-circle i {
+    color: #00a884;
+}
+
+/* Ajustes para los iconos laterales */
+.ms-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

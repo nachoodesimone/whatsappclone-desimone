@@ -1,0 +1,162 @@
+/* 
+  Estilos para la pantalla de inicio de sesión (estilo WhatsApp)
+*/
+
+.ms-login-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d7db;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Franja superior verde típica de WhatsApp Web */
+.ms-login-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-color: #00a884;
+    z-index: 0;
+}
+
+.ms-login-card {
+    width: 450px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 3px;
+    box-shadow: 0 17px 50px 0 rgba(11, 20, 26, .19), 0 12px 15px 0 rgba(11, 20, 26, .24);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ms-login-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ms-login-logo i {
+    font-size: 30px;
+    color: #00a884;
+}
+
+.ms-login-logo h1 {
+    font-size: 22px;
+    color: #111b21;
+    font-weight: 500;
+}
+
+.ms-login-instruction {
+    font-size: 15px;
+    color: #667781;
+    margin-bottom: 25px;
+}
+
+.ms-login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ms-login-input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.ms-login-input-group label {
+    font-size: 14px;
+    color: #00a884;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.ms-login-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f0f2f5;
+    border: 1px solid #e9edef;
+    border-radius: 8px;
+    color: #111b21;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ms-login-input:focus {
+    border-color: #00a884;
+}
+
+.ms-login-btn {
+    margin-top: 10px;
+    padding: 14px;
+    background-color: #00a884;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.ms-login-btn:hover {
+    background-color: #008f72;
+}
+
+.ms-login-btn:active {
+    transform: scale(0.98);
+}
+
+.ms-login-footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #667781;
+}
+
+/* Ajustes oscuros específicos */
+body.dark .ms-login-container {
+    background-color: #0a1014;
+}
+
+body.dark .ms-login-banner {
+    background-color: #005c4b;
+}
+
+body.dark .ms-login-card {
+    background-color: #222e35;
+}
+
+body.dark .ms-login-logo h1 {
+    color: #e9edef;
+}
+
+body.dark .ms-login-logo i {
+    color: #00a884;
+}
+
+body.dark .ms-login-input {
+    background-color: #2a3942;
+    border-color: #374045;
+    color: #e9edef;
+}
+
+body.dark .ms-login-input:focus {
+    border-color: #00a884;
+}
+
+body.dark .ms-login-btn {
+    background-color: #00a884;
+}

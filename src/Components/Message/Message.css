@@ -1,0 +1,79 @@
+/* 
+  Estilos para las burbujas de mensaje.
+*/
+
+.ms-msg-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.ms-msg-box {
+    max-width: 65%;
+    padding: 6px 7px 8px 9px;
+    border-radius: 7.5px;
+    font-size: 14.2px;
+    line-height: 19px;
+    position: relative;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alineación Izquierda */
+.ms-msg-row.dir-left {
+    justify-content: flex-start;
+}
+
+.ms-msg-box.dir-left {
+    background-color: var(--messenger-message-received);
+    border-top-left-radius: 0;
+    color: var(--messenger-text-primary);
+}
+
+/* Alineación Derecha */
+.ms-msg-row.dir-right {
+    justify-content: flex-end;
+}
+
+.ms-msg-box.dir-right {
+    background-color: var(--messenger-message-sent);
+    border-top-right-radius: 0;
+    color: var(--messenger-text-primary);
+}
+
+.ms-msg-user {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.ms-msg-text {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.ms-msg-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.ms-msg-time {
+    font-size: 11px;
+    color: var(--messenger-text-secondary);
+    min-width: 40px;
+    text-align: right;
+}
+
+.bi-check,
+.bi-check-all {
+    font-size: 16px;
+    color: var(--messenger-text-secondary);
+}
+
+.ms-status-read {
+    color: #53bdeb !important;
+}

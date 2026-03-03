@@ -1,0 +1,9 @@
+/* 
+  Estilos para el contenedor de la lista de chats.
+*/
+
+.ms-convo-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--messenger-sidebar-bg);
+}
